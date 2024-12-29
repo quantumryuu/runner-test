@@ -31,7 +31,6 @@ jobs:
                 ERROR_COUNT=$((ERROR_COUNT + 1))
             fi
 
-
             if [[ "$(sed -n '5p' "$FILE")" == "# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE" ]]; then
                 echo "Check for License metadata passed for line 5 in: $FILE"
             else
