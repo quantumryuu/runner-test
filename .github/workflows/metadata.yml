@@ -29,13 +29,13 @@ jobs:
                   echo "Error in $FILE: License metadata missing"
                   ERROR_COUNT=$((ERROR_COUNT + 1))
               fi
-              if grep -q "^# Source: .*" "$FILE"; then
+              if grep -q "^# Source: .\+" "$FILE"; then
                   echo "Check for Source metadata passed for: $FILE"
               else
                   echo "Error in $FILE: Source metadata missing"
                   ERROR_COUNT=$((ERROR_COUNT + 1))
               fi
-              if grep -q "^# Author: .*" "$FILE"; then
+              if grep -q "^# Source: .\+" "$FILE"; then
                   echo "Check for Author metadata passed for: $FILE"
               else
                   echo "Error in $FILE: Author metadata missing"
