@@ -1,4 +1,4 @@
-name: Check Shell Scripts
+name: Check Metadata
 'on':
   pull_request:
     paths:
