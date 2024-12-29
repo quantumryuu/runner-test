@@ -24,10 +24,10 @@ jobs:
                 ERROR_COUNT=$((ERROR_COUNT + 1))
             fi
             
-            if sed -n '4p' "$FILE" | grep -qE "^# Source: .+"; then
-                echo "Check for Source metadata passed for line 4 in: $FILE"
+            if sed -n '4p' "$FILE" | grep -qE "^# Author: .+"; then
+                echo "Check for Author metadata passed for line 4 in: $FILE"
             else
-                echo "Error in $FILE: Source metadata missing or invalid on line 4"
+                echo "Error in $FILE: Author metadata missing or invalid on line 4"
                 ERROR_COUNT=$((ERROR_COUNT + 1))
             fi
 
@@ -40,9 +40,9 @@ jobs:
             fi
 
             if sed -n '6p' "$FILE" | grep -qE "^# Source: .+"; then
-                echo "Check for Author metadata passed for line 6 in: $FILE"
+                echo "Check for Source metadata passed for line 6 in: $FILE"
             else
-                echo "Error in $FILE: Author metadata missing or invalid on line 6"
+                echo "Error in $FILE: Source metadata missing or invalid on line 6"
                 ERROR_COUNT=$((ERROR_COUNT + 1))
             fi
           done
